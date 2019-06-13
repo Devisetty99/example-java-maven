@@ -75,3 +75,25 @@
     </dependency>
   </dependencies>
 </project>
+<settings>
+  <pluginGroups>
+    <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+  </pluginGroups>
+  <profiles>
+    <profile>
+      <id>sonar</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <sonar.host.url>http:// 18.216.127.5:9000/sonar</sonar.host.url>
+	<sonar.login> dd731f77e2af046edcf60b5b37bd9a5d5ada9f2c
+</sonar.login>
+        <sonar.projectName>pranay</sonar.projectName>
+        <sonar.projectVersion>master</sonar.projectVersion>
+        <sonar.test.exclusions>**/test/**/*.*</sonar.test.exclusions>
+        <sonar.exclusions>**/ai/**/*.*,**/jdbc/**/*.*,**/mpt/**/*.*,**/jcr/**/*.*,**/JDBC*</sonar.exclusions>
+      </properties>
+    </profile>
+  </profiles>
+</settings>
